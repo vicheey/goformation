@@ -29,6 +29,17 @@ go build -o cloudformation-schema-generator .
 
 This will generate `schema/cloudformation.schema.json` containing the complete CloudFormation JSON Schema.
 
+## Testing
+
+To run the tests:
+
+```bash
+cd cloudformation-schema-generator
+go test -v
+```
+
+The test verifies that the schema generation produces consistent output by comparing checksums against a reference schema.
+
 ## Generated Schema
 
 The generated schema includes:
@@ -37,6 +48,17 @@ The generated schema includes:
 - Proper validation rules and constraints
 - Support for CloudFormation intrinsic functions
 - Complete property type definitions
+
+## Implementation
+
+This package contains only the minimal code needed for schema generation:
+
+- `main.go` - Entry point
+- `generator.go` - Schema generation logic
+- `spec.go` - CloudFormation specification data structures
+- `templates/` - Template files for schema generation
+
+The logic is adapted from the original GoFormation generate package but simplified to focus only on schema generation.
 
 ## License
 
