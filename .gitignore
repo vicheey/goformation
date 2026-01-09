@@ -9,7 +9,7 @@ devenv.local.nix
 .direnv
 
 # Binaries
-cloudformation-schema-generator/schema/cfn-schema-generator
+cloudformation-schema-generator/cfn-schema-generator
 
 # Generated schemas
 cloudformation-schema-generator/schema/cloudformation.schema.json
